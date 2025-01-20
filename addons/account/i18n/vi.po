@@ -6,7 +6,7 @@
 # Tâm Doãn Bắc, 2024
 # Nancy Momoland <thanh.np2502@gmail.com>, 2024
 # Wil Odoo, 2024
-# Thi Huong Nguyen, 2024
+# Thi Huong Nguyen, 2025
 # 
 msgid ""
 msgstr ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-09-06 12:08+0000\n"
 "PO-Revision-Date: 2023-10-26 23:09+0000\n"
-"Last-Translator: Thi Huong Nguyen, 2024\n"
+"Last-Translator: Thi Huong Nguyen, 2025\n"
 "Language-Team: Vietnamese (https://app.transifex.com/odoo/teams/41243/vi/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -3637,6 +3637,13 @@ msgstr ""
 
 #. module: account
 #. odoo-python
+#: code:addons/account/wizard/accrued_orders.py:0
+#, python-format
+msgid "Cannot create an accrual entry with orders in different currencies."
+msgstr ""
+
+#. module: account
+#. odoo-python
 #: code:addons/account/models/account_move.py:0
 #, python-format
 msgid ""
@@ -5206,11 +5213,6 @@ msgid "DELIVERED DUTY PAID"
 msgstr "GIAO ĐÃ NỘP THUẾ"
 
 #. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__down
-msgid "DOWN"
-msgstr "XUỐNG"
-
-#. module: account
 #: model:ir.ui.menu,name:account.menu_board_journal_1
 msgid "Dashboard"
 msgstr "Trang chủ"
@@ -5948,6 +5950,11 @@ msgstr "Lối tắt công thức miền"
 #: model_terms:ir.ui.view,arch_db:account.res_config_settings_view_form
 msgid "Domestic country of your accounting"
 msgstr "Quốc gia nội địa cho kế toán của bạn"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__down
+msgid "Down"
+msgstr "Xuống"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_move_send__checkbox_download
@@ -7241,11 +7248,6 @@ msgid "Growth Comparison"
 msgstr "So sánh tăng trưởng"
 
 #. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__half-up
-msgid "HALF-UP"
-msgstr "LÊN MỘT NỬA"
-
-#. module: account
 #: model:ir.model,name:account.model_ir_http
 msgid "HTTP Routing"
 msgstr "Định tuyến HTTP"
@@ -7472,8 +7474,8 @@ msgid ""
 "If activated, user-defined filters on journal items can be selected on this "
 "report"
 msgstr ""
-"Nếu được kích hoạt, những bộ lọc do người dùng xác định trên các hạng mục "
-"bút toán có thể được chọn trên báo cáo này"
+"Nếu được kích hoạt, những bộ lọc người dùng tạo trên các hạng mục bút toán "
+"có thể được chọn trên báo cáo này"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_account__message_needaction
@@ -8007,7 +8009,7 @@ msgstr ""
 msgid ""
 "Internal field to shorten expression_ids creation for the external engine"
 msgstr ""
-"Trường nội bộ để rút ngắn quá trình tạo expression_ids cho công cụ bên ngoài"
+"Trường nội bộ để rút ngắn quá trình tạo expression_ids cho công cụ ngoài"
 
 #. module: account
 #: model:ir.model.fields,help:account.field_account_report_line__tax_tags_formula
@@ -9761,6 +9763,11 @@ msgstr "Cho phép tìm theo tên"
 msgid "Navigate easily through reports and see what is behind the numbers"
 msgstr ""
 "Dễ dàng di chuyển giữa các báo cáo và nắm bắt tình hình ẩn sau các con số"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__half-up
+msgid "Nearest"
+msgstr "Gần nhất"
 
 #. module: account
 #: model:ir.model.fields,field_description:account.field_account_bank_statement_line__need_cancel_request
@@ -12503,6 +12510,7 @@ msgstr "Lưu trang này và quay lại đây để thiết lập tính năng."
 #. module: account
 #. odoo-python
 #: code:addons/account/models/account_payment.py:0
+#: code:addons/account/wizard/account_payment_register.py:0
 #, python-format
 msgid "Scan me with your banking app."
 msgstr "Hãy quét tôi bằng ứng dụng ngân hàng của bạn."
@@ -14091,11 +14099,11 @@ msgstr ""
 #: code:addons/account/models/chart_template.py:0
 #, python-format
 msgid ""
-"The Syscohada chart template shouldn't be selected directly. Instead, you "
-"should directly select the chart template related to your country."
+"The %s chart template shouldn't be selected directly. Instead, you should "
+"directly select the chart template related to your country."
 msgstr ""
-"Không nên trực tiếp chọn mẫu hệ thống Sysohada. Thay vào đó, bạn nên trực "
-"tiếp chọn mẫu hệ thống liên quan đến quốc gia của mình."
+"Không nên trực tiếp chọn mẫu hệ thống %s. Thay vào đó, bạn nên trực tiếp "
+"chọn mẫu hệ thống liên quan đến quốc gia của mình."
 
 #. module: account
 #. odoo-python
@@ -15868,11 +15876,6 @@ msgid "Type of the exception activity on record."
 msgstr "Loại hoạt động ngoại lệ trong bản ghi."
 
 #. module: account
-#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__up
-msgid "UP"
-msgstr "LÊN"
-
-#. module: account
 #. odoo-python
 #: code:addons/account/models/account_bank_statement.py:0
 #, python-format
@@ -16049,6 +16052,11 @@ msgstr "Số thanh toán không tin cậy"
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
 msgid "UoM"
 msgstr "ĐVT"
+
+#. module: account
+#: model:ir.model.fields.selection,name:account.selection__account_cash_rounding__rounding_method__up
+msgid "Up"
+msgstr "Lên"
 
 #. module: account
 #: model_terms:ir.ui.view,arch_db:account.view_move_form
@@ -16856,6 +16864,14 @@ msgid ""
 msgstr ""
 "Bạn không thể tạo một dòng sao kê mới mà không thiết lập tài khoản tạm thời "
 "cho sổ nhật ký %s."
+
+#. module: account
+#. odoo-python
+#: code:addons/account/wizard/account_payment_register.py:0
+#, python-format
+msgid "You can't create payments for entries belonging to different branches."
+msgstr ""
+"Bạn không thể tạo thanh toán cho các bút toán thuộc các nhánh khác nhau."
 
 #. module: account
 #. odoo-python
